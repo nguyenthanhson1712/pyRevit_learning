@@ -319,14 +319,15 @@ namespace PyRevitLabs.PyRevit.Runtime {
                     // Set window identity to the command unique identifier
                     newOutput.OutputId = ScriptData.CommandUniqueId;
 
-                    // set window app version header
+                    //// set window app version header
+                    //newOutput.AppVersion = string.Format(
+                    //    "{0}:{1}:{2}",
+                    //    EnvDict.PyRevitVersion,
+                    //    EngineType == ScriptEngineType.CPython ? EnvDict.PyRevitCPYVersion : EnvDict.PyRevitIPYVersion,
+                    //    EnvDict.RevitVersion
+                    //    );
                     newOutput.AppVersion = string.Format(
-                        "{0}:{1}:{2}",
-                        EnvDict.PyRevitVersion,
-                        EngineType == ScriptEngineType.CPython ? EnvDict.PyRevitCPYVersion : EnvDict.PyRevitIPYVersion,
-                        EnvDict.RevitVersion
-                        );
-
+                        "Son");
                     _scriptOutput = new WeakReference<ScriptConsole>(newOutput);
                     return newOutput;
                 }

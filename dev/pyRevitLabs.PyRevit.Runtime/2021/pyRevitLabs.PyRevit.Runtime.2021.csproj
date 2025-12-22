@@ -3,4 +3,10 @@
     <RevitVersion>2021</RevitVersion>
     <TargetFramework>net48</TargetFramework>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug IPY2712PR|AnyCPU'">
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug IPY342|AnyCPU'">
+    <Optimize>False</Optimize>
+  </PropertyGroup>
 </Project>
