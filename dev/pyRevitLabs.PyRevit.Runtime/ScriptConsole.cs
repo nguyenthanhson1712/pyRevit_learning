@@ -227,6 +227,9 @@ namespace PyRevitLabs.PyRevit.Runtime {
             // setup unique id for this output window
             OutputUniqueId = Guid.NewGuid().ToString();
 
+            Topmost = true;
+            IsAutoCollapseActive = false;
+
             InitializeComponent();
         }
 
@@ -338,8 +341,11 @@ namespace PyRevitLabs.PyRevit.Runtime {
 
             #endregion
 
-            this.Width = 900; this.MinWidth = 700;
-            this.Height = 600; this.MinHeight = this.TitleBarHeight;
+            //this.Width = 900; this.MinWidth = 700;
+            //this.Height = 600; this.MinHeight = this.TitleBarHeight;
+
+            this.Width = 700; this.MinWidth = 700;
+            this.Height = 200; this.MinHeight = this.TitleBarHeight;
             this.ResizeMode = ResizeMode.CanResize;
 
             // setup auto-collapse
