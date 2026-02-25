@@ -375,14 +375,15 @@ namespace PyRevitLabs.PyRevit.Runtime {
                     // Set window identity to the command unique identifier
                     newOutput.OutputId = ScriptData.CommandUniqueId;
 
-                    //// set window app version header
-                    //newOutput.AppVersion = string.Format(
-                    //    "{0}:{1}:{2}",
-                    //    EnvDict.PyRevitVersion,
-                    //    EngineType == ScriptEngineType.CPython ? EnvDict.PyRevitCPYVersion : EnvDict.PyRevitIPYVersion,
-                    //    EnvDict.RevitVersion
-                    //    );
-                    newOutput.AppVersion = string.Format("S?n");
+                    // set window app version header
+                    newOutput.AppVersion = string.Format(
+                        "{0}:{1}:{2}:{3}",
+                        "SON_",
+                        EnvDict.PyRevitVersion,
+                        EngineType == ScriptEngineType.CPython ? EnvDict.PyRevitCPYVersion : EnvDict.PyRevitIPYVersion,
+                        EnvDict.RevitVersion
+                        );
+                    //newOutput.AppVersion = string.Format("Son_ARC");
 
                     _scriptOutput = new WeakReference<ScriptConsole>(newOutput);
                     return newOutput;
